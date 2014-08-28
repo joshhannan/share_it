@@ -1,0 +1,37 @@
+@mixin vendorize($property, $value) {
+	-webkit-#{$property}: $value;
+	-moz-#{$property}: $value;
+	-ms-#{$property}: $value;
+	-o-#{$property}: $value;
+	#{$property}: $value;
+}
+@mixin bp($point) {
+	$bp-480: "(min-width: 480px)";
+	$bp-640: "(min-width: 640px)";
+	$bp-max-768: "(max-width: 769px)";
+	$bp-768: "(min-width: 769px)";
+	$bp-1000: "(min-width: 1000px)";
+	$bp-1400: "(min-width: 1400px)";
+	$bp-768-1000: "(min-width: 769px) and (max-width: 1000px)";
+	@if $point == 480 {
+		@media #{$bp-480} { @content; }
+	}
+	@else if $point == 640 {
+		@media #{$bp-640} { @content; }
+	}
+	@else if $point == max-768 {
+		@media #{$bp-max-768} { @content; }
+	}
+	@else if $point == 768 {
+		@media #{$bp-768} { @content; }
+	}
+	@else if $point == 1000 {
+		@media #{$bp-1000}  { @content; }
+	}
+	@else if $point == 1400 {
+		@media #{$bp-1400}  { @content; }
+	}
+	@else if $point == 768-1000 {
+		@media #{$bp-768-1000} { @content; }
+	}
+}
