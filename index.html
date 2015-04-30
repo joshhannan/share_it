@@ -10,63 +10,61 @@
 		<title>Share It Plugin</title>
 		<link rel="stylesheet" type="text/css" href="css/global.css">
 		<script src="jquery-1.10.2.min.js"></script>
-		<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js"></script>
-		<script src="share_it.min.js"></script>
+		<script src="text_toggle.min.js"></script>
 		<script type="text/javascript">
-
 			$(function() {
-				$('.share_it').share_it({
-					title: 'Temporary Title',
-					url: 'http://www.google.com'
-				});
+				$('.toggle').text_toggle();
 			});
-
-			var addthis_config = {
-			     pubid: "ra-53c959606c35a4ba"
-			}
 		</script>
 	</head>
 	<body>
 		<header class="block">
 			<div class="container">
-				<h1>Share It Plugin</h1>
-				<p>By utilizing addThis's already robust API, this little plugin can do pretty much whatever you want it to do.</p>
+				<h1>Text Toggle Plugin</h1>
+				<p>Simple text toggle with default read more/read less functionality.</p>
 			</div><!--/container-->
 		</header><!--/block-->
 		<section class="block">
 			<div class="container">
-				<div class="left share_it block">
+				<div class="left block">
 <pre>
 	<code>
-		$('.share_it').share_it({
-			title: 'Temporary Title',
-			url: 'http://www.google.com',
-			buttons: [
-				{
-					type: 'facebook',
-					image_url: '',
-					icon: ''
-				},{
-					type: 'twitter',
-					image_url: '',
-					icon: ''
-				},{
-					type: 'pinterest',
-					image_url: '',
-					icon: ''
-				}
-			]
+		$('.toggle').read_toggle({
+			character_limit: 100,
+			link_text: '...Read More',
+			return_text: '...Read Less',
+			animation_speed: null
 		});
 	</code>
 </pre>
 				</div><!---/block-->
 			</div><!--/container-->
 		</section>
-		<footer>
-			<div class="container">
-
-			</div><!--/container-->
-		</footer>
-
+	<section class="right block">
+		<div class="container">
+			<div class="toggle block">
+				<h1>Testing</h1>
+				<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida at eget metus.</p>
+				<p>Cras mattis consectetur purus sit amet fermentum. Curabitur blandit tempus porttitor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Etiam porta sem malesuada magna mollis euismod.</p>
+				<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Curabitur blandit tempus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae elit libero, a pharetra augue. Cras mattis consectetur purus sit amet fermentum.</p>
+				<p>Vestibulum id ligula porta felis euismod semper. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Curabitur blandit tempus porttitor.</p>
+				<ul>
+					<li>Donec ullamcorper nulla non metus auctor fringilla.</li>
+					<li>Nulla vitae elit libero, a pharetra augue.</li>
+					<li>Aenean lacinia bibendum nulla sed consectetur.</li>
+					<li>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</li>
+				</ul>
+				<p>Cras mattis consectetur purus sit amet fermentum. Curabitur blandit tempus porttitor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Etiam porta sem malesuada magna mollis euismod.</p>
+				<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Curabitur blandit tempus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae elit libero, a pharetra augue. Cras mattis consectetur purus sit amet fermentum.</p>
+				<p>Vestibulum id ligula porta felis euismod semper. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Curabitur blandit tempus porttitor.</p>
+				<blockquote>
+					Vestibulum id ligula porta felis euismod semper. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Curabitur blandit tempus porttitor.
+				</blockquote>
+				<p>Cras mattis consectetur purus sit amet fermentum. Curabitur blandit tempus porttitor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Etiam porta sem malesuada magna mollis euismod.</p>
+				<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Curabitur blandit tempus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae elit libero, a pharetra augue. Cras mattis consectetur purus sit amet fermentum.</p>
+				<p>Vestibulum id ligula porta felis euismod semper. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Curabitur blandit tempus porttitor.</p>
+			</div><!--/block-->
+		</div><!--/container-->
+	</section>
 	</body>
 </html>
